@@ -19,6 +19,9 @@ namespace ModuleTest
         public double[] Solve(double a, double b, double c)
         {
             //aх2+bx+c=0
+
+            var result = (a + b) / c;
+
             return Array.Empty<double>();
         }
         
