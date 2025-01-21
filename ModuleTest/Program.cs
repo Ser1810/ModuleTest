@@ -10,6 +10,12 @@ namespace ModuleTest
     {
         public QuadraticEquation() {}
 
+        public static void Main()
+        {
+            Console.WriteLine( "Hello world");
+            Console.ReadKey();
+        }
+
         public double[] Solve(double a, double b, double c)
         {
             //aх2+bx+c=0
