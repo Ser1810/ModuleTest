@@ -64,13 +64,13 @@ namespace Tests
             double a = double.Epsilon;
             double b = 2;
             double c = 1;
-            var expected = new Exception("Коэффициент a не может быть равен 0");
+            var expected = new Exception("Коэффициент a не может быть равен 01");
             QuadraticEquation quadraticEquation = new QuadraticEquation();
 
             // Act && Assert
             var actual = Assert.ThrowsException<Exception>(() => quadraticEquation.Solve(a, b, c));
 
-            Assert.AreEqual(expected.Message, actual.Message);
+            Assert.AreEqual(expected.Message, actual.Message, double.Epsilon + " ");
         }
 
         [TestMethod]
