@@ -64,13 +64,13 @@ namespace Tests
             double a = double.Epsilon;
             double b = 2;
             double c = 1;
-            var expected = new Exception("Коэффициент a не может быть равен 01");
+            var expected = new Exception("The coefficient a cannot be equal to 0");
             QuadraticEquation quadraticEquation = new QuadraticEquation();
 
             // Act && Assert
             var actual = Assert.ThrowsException<Exception>(() => quadraticEquation.Solve(a, b, c));
 
-            Assert.AreEqual(expected.Message, actual.Message, double.Epsilon + " ");
+            Assert.AreEqual(expected.Message, actual.Message);
         }
 
         [TestMethod]
@@ -97,7 +97,7 @@ namespace Tests
             double a = double.NegativeInfinity;
             double b = 1;
             double c = 1;
-            var expected = new Exception("Коэффициенты не могут быть NegativeInfinity");
+            var expected = new Exception("The coefficients cannot be NegativeInfinity");
             QuadraticEquation quadraticEquation = new QuadraticEquation();
 
             // Act && Assert
@@ -113,7 +113,7 @@ namespace Tests
             double a = 1;
             double b = double.NegativeInfinity;
             double c = 1;
-            var expected = new Exception("Коэффициенты не могут быть NegativeInfinity");
+            var expected = new Exception("The coefficients cannot be NegativeInfinity");
             QuadraticEquation quadraticEquation = new QuadraticEquation();
 
             // Act && Assert
@@ -129,7 +129,7 @@ namespace Tests
             double a = 1;
             double b = 1;
             double c = double.NegativeInfinity;
-            var expected = new Exception("Коэффициенты не могут быть NegativeInfinity");
+            var expected = new Exception("The coefficients cannot be NegativeInfinity");
             QuadraticEquation quadraticEquation = new QuadraticEquation();
 
             // Act && Assert
@@ -145,7 +145,7 @@ namespace Tests
             double a = double.PositiveInfinity;
             double b = 1;
             double c = 1;
-            var expected = new Exception("Коэффициенты не могут быть PositiveInfinity");
+            var expected = new Exception("The coefficients cannot be PositiveInfinity");
             QuadraticEquation quadraticEquation = new QuadraticEquation();
 
             // Act && Assert
@@ -161,7 +161,7 @@ namespace Tests
             double a = 1;
             double b = double.PositiveInfinity;
             double c = 1;
-            var expected = new Exception("Коэффициенты не могут быть PositiveInfinity");
+            var expected = new Exception("The coefficients cannot be PositiveInfinity");
             QuadraticEquation quadraticEquation = new QuadraticEquation();
 
             // Act && Assert
@@ -177,7 +177,7 @@ namespace Tests
             double a = 1;
             double b = 1;
             double c = double.PositiveInfinity;
-            var expected = new Exception("Коэффициенты не могут быть PositiveInfinity");
+            var expected = new Exception("The coefficients cannot be PositiveInfinity");
             QuadraticEquation quadraticEquation = new QuadraticEquation();
 
             // Act && Assert
@@ -193,7 +193,7 @@ namespace Tests
             double a = double.NaN;
             double b = 1;
             double c = 1;
-            var expected = new Exception("Коэффициенты не могут быть NaN");
+            var expected = new Exception("The coefficients cannot be NaN");
             QuadraticEquation quadraticEquation = new QuadraticEquation();
 
             // Act && Assert
@@ -209,7 +209,7 @@ namespace Tests
             double a = 1;
             double b = double.NaN;
             double c = 1;
-            var expected = new Exception("Коэффициенты не могут быть NaN");
+            var expected = new Exception("The coefficients cannot be NaN");
             QuadraticEquation quadraticEquation = new QuadraticEquation();
 
             // Act && Assert
@@ -225,7 +225,7 @@ namespace Tests
             double a = 1;
             double b = 1;
             double c = double.NaN;
-            var expected = new Exception("Коэффициенты не могут быть NaN");
+            var expected = new Exception("The coefficients cannot be NaN");
             QuadraticEquation quadraticEquation = new QuadraticEquation();
 
             // Act && Assert

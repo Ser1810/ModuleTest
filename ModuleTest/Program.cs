@@ -18,22 +18,22 @@ namespace ModuleTest
 
             if (Math.Abs(a) < epsilon)
             {
-                throw new Exception("Коэффициент a не может быть равен 0");
+                throw new Exception("The coefficient a cannot be equal to 0");
             }
 
             if (a == double.NegativeInfinity || b == double.NegativeInfinity || c == double.NegativeInfinity)
             {
-                throw new Exception("Коэффициенты не могут быть NegativeInfinity");
+                throw new Exception("The coefficients cannot be NegativeInfinity");
             }
 
             if (a == double.PositiveInfinity || b == double.PositiveInfinity || c == double.PositiveInfinity)
             {
-                throw new Exception("Коэффициенты не могут быть PositiveInfinity");
+                throw new Exception("The coefficients cannot be PositiveInfinity");
             }
 
             if (double.IsNaN(a) || double.IsNaN(b) || double.IsNaN(c))
             {
-                throw new Exception("Коэффициенты не могут быть NaN");
+                throw new Exception("The coefficients cannot be NaN");
             }
 
             var d = b*b - 4*a*c;
